@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <script>
+        // length
+        let arr=[10,30,20,30,40]
+        let length=arr.length; //it will find length of array arr and store in length variable
+        console.log(length); 
+
+        //shift remove first element , (display undefined if try to use shift on empty array)
+        let sh=arr.shift();
+        console.log(sh);        // print removed/first element of array
+        console.log(arr)  // print remaining array after remove of first element
+
+        // unshift -  add element at begin of array
+        let unsh=arr.unshift(50); //add element 50 as first element of an array
+        console.log(unsh); // display 4 as unsh value because length of latest array is 4
+        console.log(arr); // display all element of array after use of unshift
+        unsh=arr.unshift(100,200,300); // add multiple element at a time
+        console.log(unsh); // display 7 as unsh value because length of latest array is 7
+        console.log(arr); // display all element of array after use of unshift
+
+
+        // pop - remove element from end of array
+
+        let po=arr.pop(); // remove from end
+        console.log(po); // show removed element 
+        console.log(arr); // array after remove last element
+
+        // push - add element at last
+
+        let pus=arr.push(10); // add element 10 at end of the array
+        console.log(pus); // display current length of array arr
+        console.log(arr); // showing 
+
+        //indexOf -  give index of an array element
+        let ind=arr.indexOf(30); // find index of 30 in array element 
+        console.log(ind); // show index of 30 , -1 if element not in array list
+
+
+        // last indexOd - display index of last occurrence of element, -1 if no occurrence 
+        let lastIndex = arr.lastIndexOf(30)
+        console.log(lastIndex); // show last occurrence element index
+
+        // includes -  true if element is present in array
+        let inc=arr.includes(30); // return if 30 present in array , otherwise false
+        let inc2=arr.includes(32); // return if 30 present in array , otherwise false
+        console.log(inc); // true because 30 present               
+        console.log(inc2);  // false because 32 not present             
+        console.log(arr.includes(inc2)); // false because 32 not present
+
+        // join - use to convert array into string, return type of join is string, based apron the provide value perform on every element
+        let jn=arr.join('_'); //join every element with underscore
+        console.log(jn); // show values with join _ in this example
+        console.log(typeof jn); // display type of jn which is join
+        let jn2=arr.join('      '); //join every element with  spaces
+        console.log(jn2); // show values with join _ in this example
+        console.log(arr); // show array with _ in between every element
+        
+        //reverse - it put the array element in reverse order
+        let rev=arr.reverse();
+        console.log(arr);
+
+        //concat - it will join two array and give us new array
+        let tarr1=[10,20];        
+        let tarr2=[10,20];        
+        let tarr3=tarr1.concat(tarr2);
+        console.log(tarr3);
+
+        //forEach - call a function for each element in array, not executed for empty element, it have two arguments value and index
+        arr.forEach(function(value,index){
+            console.log(value)
+        })
+
+        //every - check all element pass the condition or not
+        let result=arr.every(function(value,index){
+            return value>5 
+        })
+        console.log(result) //return true because each value in array is >5
+        let result2=arr.every(function(value,index){
+            return value>20 //return false because each value in array is not a >20
+        })
+        console.log(result2)
+
+        //some - if any one element satisfied with condition it return true otherwise false
+        let sm=arr.some(function(value,index){
+            return value>50
+        })
+        console.log(arr);
+        console.log(sm); //return true because value>50 condition is satisfied at least from one element
+        let sm1=arr.some(function(value,index){
+            return value%33==0
+        })
+        console.log(arr);
+        console.log(sm1); //return false because no any value is perfect divisible to 33
+
+        //filter - create new array of satisfied element 
+        let fltr=arr.filter(function(value,index){
+            return value>50
+        })
+        console.log(arr);
+        console.log(fltr);
+
+        //slice - take two argument, start and end
+        let sl=arr.slice(2,5) 
+        console.log(arr);
+        console.log(sl); //print element from index from 2 to less then 5 which is 4
+        let sl2=arr.slice(2) //if pass only one argument from this index to end it will print
+        console.log(arr);
+        console.log(sl2); //print element from index from 2 to less then 5 which is 4
+
+        //splice - three argument 1. start from 2. how many element to be delete 3. how many element to be insert
+        console.log(arr); //array before splice
+        let sp=arr.splice(3,3) // delete 3 element from index 3
+        console.log(sp); // show deleted element
+        console.log(arr); //array after splice  
+        let sp2=arr.splice(4,0,40,60,50) // start from 4, delete 0 element, and add 40,60,50 from 4th element
+        console.log(sp2);
+        console.log(arr);
+        
+
+        //map - perform same operation on every element
+        let mp=arr.map(function(value,index){
+            return value+1
+        })
+        console.log(arr);
+        console.log(mp);
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods use</title>
+    <style>
+        h1 {
+            display: flex;    
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please see console for all outputs</h1>
+    <script>
+        // map - we can perform operation on every element and create new array , it does not change original array
+        console.log("map - we can perform operation on every element and create new array , it does not change original array");
+        let arrMap = [1,2,3,4,5];
+        let result = arrMap.map((temp)=>{
+            return temp * 3;
+        })
+        console.log(result);
+
+        // concat = concat/merge two or more array into one
+        console.log("concat = concat/merge two or more array into one");
+        let arrConcat1 = [1,2];
+        let arrConcat2 = [3,4,5];
+        let arrConcat3 = [6,7,8];
+        let arrconcatMain = arrConcat1.concat(arrConcat2,arrConcat3);
+        console.log(arrconcatMain);
+
+        // every - check is all element pass the test and return boolean value
+        console.log("every - check is all element pass the test and return boolean value");
+        let arrEvery = [5,10,15,20,25,26];
+        let result2 = arrEvery.every((temp)=>{
+            return temp%5==0
+        })
+        console.log(result2);
+
+        // filter - create new array with element which pass the filter test case
+        console.log("filter - create new array with element which pass the filter test case");
+        let arrFilter = [1,2,3,4,5,6,7,8,9,10];
+        let resultFilter = arrFilter.filter((temp)=>{
+            return temp%2==0
+        })
+        console.log(resultFilter);
+
+        // forEach - execute a function for every array element at least once
+        console.log("forEach - execute a function for every array element at least once");
+        let arrForEach = [1,2,3,4,5];
+        arrForEach.forEach((elements)=>console.log(elements))
+
+        // indexOf - return first match index of given element and -1 if not match any value    
+        console.log("indexOf - return first match index of given element and -1 if not match any value");
+        let arrIndexOf = [1,2,5,3,4,5,6,7,8,9];
+        console.log(arrIndexOf.indexOf(5));
+        console.log(arrIndexOf.indexOf(10));
+        
+        // lastIndexOf - return last match index of given element and -1 if not match any value    
+        console.log("lastIndexOf - return last match index of given element and -1 if not match any value    ");
+        let arrLastIndexOf = [1,2,5,3,4,5,6,7,8,9];
+        console.log(arrLastIndexOf.lastIndexOf(5));
+        console.log(arrLastIndexOf.lastIndexOf(10));
+
+        // reduce - perform on first 2 element then take his result as first element and same operation with third element and so on
+        console.log("reduce - perform on first 2 element then take his result as first element and same operation with third element and so on");
+        let arrReduce = [1,2,3,4,5,6];        
+        let resReduce = arrReduce.reduce((index,element)=> index+element)
+        console.log(resReduce);
+
+        // reverse - reverse the array
+        console.log(" reverse - reverse the array");
+        const arrReverse = [1,2,3,4,5];
+        console.log(arrReverse.reverse());
+
+        // slice - return part of array as per our requirements
+        console.log("slice - return part of array as per our requirements");
+        let arrSlice = [1,2,3,4,5,6,7,8,9,10];         
+        console.log(arrSlice.slice(2,4));//expected output is: 3,4
+
+        // some - check if at least one element pass the test case, return true if pass otherwise false
+        console.log("some - check if at least one element pass the test case, return true if pass otherwise false");
+        let arrSome = [1,2,3,4,5];
+        let even = (element)=> element/2==2
+        console.log(arrSome.some(even));
+
+        // sort - sort element default order is ascending by character
+        console.log("sort - sort element default order is ascending");
+        let arrSort = [1,4,5,66,55,7,222,4,1200]; //expected output is 1,1200,222,4,4,5,55,66,7
+        console.log(arrSort.sort());
+
+        // splice - multiple arguments 1st-at position, 2nd- how many element to remove,3rd-and so on provide list of element if want to add 
+        console.log("splice - multiple arguments 1st-at position, 2nd- how many element to remove,3rd - and so on - provide list of element if want to add");
+        let arrSplice = [1,2,3,4,5];
+        arrSplice.splice(1,0,) // expected output - 1,2,3,4,5
+        console.log(arrSplice);
+        arrSplice.splice(1,2); // expected output - 1,4,5
+        console.log(arrSplice);
+        arrSplice.splice(1,0,101,102,103); //expected output - 1,101,102,103,4,5 
+        console.log(arrSplice);
+
+        // fill - element with provide element from provide element till last
+        console.log("fill - element with provide element from provide element till last");
+        let arrFill = [1,2,3,4,5,6,7,8,9,10];
+        console.log(arrFill.fill(10,2));  //1st element to fill, 2nd position form to fill
+
+        // join - return new string with concanating all element with this array separated by separator provoid by developer
+        console.log("join - return new string with concanating all element with this array separated by separator provoid by developer");
+        let arrJoin = [1,2,3,4,5];
+        resJoin = arrJoin.join("_");
+        console.log(resJoin);
+
+    </script>    
+
+</body>
+</html>

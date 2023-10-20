@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count number of duplicates in array</title>
+
+    <script>
+
+        let arr=[1,2,3,4,5,5,2,3];
+        
+        // arr.forEach(element =>{
+
+        // })
+        let count=0;
+        for(let i=0;i<arr.length;i++) {
+            for(let j=i+1;j<arr.length;j++) {
+                if(arr[i]==arr[j]) {
+                    count++;
+                }
+            }
+        }
+
+        console.log(arr);
+        console.log(" Number of Duplicate is : " + count);
+
+    </script>
+
+</head>
+<body>
+    <h2>check console for output</h2>
+</body>
+</html>

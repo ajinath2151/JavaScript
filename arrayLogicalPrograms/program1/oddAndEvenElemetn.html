@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd and even element form array</title>
+
+    <script>
+
+        var arr=[1,2,3,4,5];
+        var even=[];
+        var odd=[];
+        var e=0
+        var o=0;
+        for(let i=0;i<arr.length;i++) {
+            if(arr[i]%2==0) {
+                even[e]=arr[i];
+                e++;
+            }
+            else {
+                odd[o]=arr[i];
+                o++;
+                
+            }            
+        }
+        console.log("odd element");
+        for(let i=0;i<odd.length;i++) {                        
+            console.log(odd[i]);
+        }
+        console.log("even element");
+        for(let i=0;i<even.length;i++) {                        
+            console.log(even[i]);
+        }
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

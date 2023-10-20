@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Array</title>
+    <!-- <script src="printArray.js"></script>     -->
+
+    <script>
+        let arr1=[1,2,3,4,5];
+        let arr2=[6,7,8,9,10];
+
+        console.log(arr1); // print array
+        console.log(arr1[0] + " : first element of array1"); //print first element of array
+        console.log(arr1[4] + " : last element of array1"); //print first element of array
+        console.log(arr1.length + " : array1 length"); //array length
+        let arr3=arr1.concat(arr2)
+        console.log(arr3)   // concat array1 and array 2 in array3 and print
+        console.log(arr3.length + " : length of array3");
+        arr3.shift(50);
+        console.log(arr3 + " : delete first element of array3 using shift") //delete first element of array3 using shift
+        //add five at first position of array3
+        arr3.unshift(5) //add five at first position of array3
+        console.log(arr3);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

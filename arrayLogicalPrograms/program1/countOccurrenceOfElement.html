@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>count occurrence of element</title>
+
+    <script>
+      let arr = [1, 2, 3, 5, 4, 6, 2, 25,44,3, 4, 5, 2, 8, 4,44,22,35,4,56,5,25];
+      let count = {};
+      for(let i=0;i<arr.length;i++) {
+        let num=arr[i]; 
+        count[num]=count[num]?count[num]+1:1;
+      }
+      console.log(count);
+
+    //same above program using forEach loop
+    // let count={};
+    // arr.forEach(num => {
+    //     count[num]=count[num]?count[num]+1:1;
+    // });
+    // console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>

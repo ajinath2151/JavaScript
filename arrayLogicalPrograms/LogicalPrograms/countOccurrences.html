@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>occurrences of each element of array in js</title>
+
+    <script>
+
+        let unique={};
+        function uniqueFunciton(arr) {
+            for(let i=0;i<arr.length;i++) {
+                let num=arr[i];
+                unique[num]=unique[num]?unique[num]+1:1;
+            }
+            return unique;
+        }
+        
+        let arr=[1,2,5,4,3,6,2,5,41]
+        unique=uniqueFunciton(arr);
+        console.log(unique);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
