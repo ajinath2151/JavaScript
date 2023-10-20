@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API Methods</title>
+</head> 
+<body>
+    
+    <script>
+        // promise.all - use to show output when all promises are resolved, if any promise is reject all promise not showing output it show error
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("value 1");
+                // reject(new Error("error in promise 1"))
+            }, 1000);
+        })
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("value 2");
+                // reject(new Error("error in p2"));                
+            }, 2000);
+        })
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("value 3");
+                // reject(new Error("error in promise p3"))
+            }, 3000);
+        })
+        // p1.then((value)=>{
+        //     console.log(value);
+        // })
+        // p2.then((value)=>{
+        //     console.log(value);
+        // })
+        // p3.then((value)=>{
+        //     console.log(value);
+        // })
+        // 1. let promise_all = Promise.all([p1,p2,p3]);  // making array of promises
+        // promise_all.then((value)=>{
+        //     console.log(value);
+        // })
+        
+        // 2. promise.allSettled - use to show all rejected and resolved promises i.e. if some reject then it show as rejected
+        // let promise_all = Promise.allSettled([p1,p2,p3]);
+        // promise_all.then((value)=>{
+        //     console.log(value);
+        // })
+
+        // 3. promise.race - whichever promise complete first only it show. if first comes value is rejected then show error
+        // let promise_all = Promise.race([p1,p2,p3]);
+        // promise_all.then((value)=>{
+        //     console.log(value);
+        // })
+
+        // 4. promise.any - show first resolved (except reject or error) value. if no promise fulfill all having error then show first promise with error
+        // let promise_all = Promise.race([p1,p2,p3]);
+        // promise_all.then((value)=>{
+        //     console.log(value);
+        // })
+
+        // 5. promise.resolve -  simply return one value which is resolved
+            // let promise_all=Promise.resolve(5);
+            // promise_all.then((value)=>{
+            //     console.log(value);
+            // })
+        // 6. promise.reject -  showing rejected promises or error
+        let promise_all=Promise.reject(new Error("error / promise is rejected"));
+        promise_all.then((value)=>{
+            console.log(value);
+        })
+    </script>
+
+</body>
+</html>

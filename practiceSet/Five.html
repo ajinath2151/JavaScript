@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice set 5</title>
+    <style>
+        .bulb {
+            height: 340px;
+            width: 340px;
+            background-color: yellow;
+        }
+        .bulbContainer {
+            height: 340px;
+            width: 340px;            
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. show different alert on different buttons -->
+    <!-- <button onclick="alert('give me wadapav')">order wadapav</button>
+    <button onclick="alert('give me misal')">order misal</button>
+    <button onclick="alert('give me shabudana khichdi')">order shabudana khichdi</button> -->
+    
+    <!-- 2. create website which can capable to store bookmark using href -->
+    
+    <!-- <h1>Bookmarks</h1>
+    <a href="https://google.com"></a> <button id="google">Google</button>
+    <button id="fb">facebook</button>
+    <button id="yt">youtube</button> -->
+       
+    
+    <!-- 3. repeat question 2 using event listener -->
+        <!-- <h1>Bookmarks</h1>
+        <button id="google">Google</button>
+        <button id="fb">facebook</button>
+        <button id="yt">youtube</button> -->
+
+    <!-- 5 -->
+    <div class="bulbContainer bulb" id="bulb">
+        bulb on and off
+    </div>
+    
+        <script>
+            //3. repeat question 2 using event listener 
+            // document.getElementById("google").addEventListener("click",function(){
+            // window.location = "https://www.google.com";
+            // win.focus();    
+            // })
+            // document.getElementById("fb").addEventListener("click",function(){
+            //     window.location = "https://www.facebook.com";
+            //     win.focus();    
+            // })
+            // document.getElementById("yt").addEventListener("click",function(){
+            //     window.location = "https://www.youtube.com";
+            //     win.focus();    
+            // })
+
+            // 4. keep fetching content of website every 5 second
+            // const fetchContent = async (url) => {
+            //     con = await fetch(url);
+            //     let a = await con.json();
+            //     return a;
+            // }
+            // setInterval(async function() {
+            //     let url = "https://jsonplaceholder.typicode.com/todos/1";
+            //     console.log(await fetchContent(url));
+            // }, 2000);
+       
+            // 5.
+            setInterval(async function() {
+                document.querySelector("#bulb").classList.toggle("bulb")
+            }, 2000);
+    </script>
+</body>
+</html>

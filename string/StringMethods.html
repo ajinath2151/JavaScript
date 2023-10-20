@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods of javascript</title>
+</head>
+<body>
+    Check console for string methods output
+    <script>
+         // length - use to count length of string
+         console.log("length - use to count length of string");
+         let str1 = "ajinath";
+         console.log(str1.length);
+
+        //  slice - can return part of string or full string as per required
+        console.log("slice - can return part of string or full string as per required");
+        let str2 = "ajinath";
+        let res2 = str2.slice(2,4);
+        console.log(str2, "from 2 to 3 index");
+        console.log(res2);
+
+        // substring - like slice return part of string need start and end index
+        console.log("substring - like slice return part of string need start and end index");
+        let str3 = "ajinath";
+        console.log(str3.substring(2,4));
+        
+        // substr - like slice and substring return part of string need start and end index
+        console.log("substring - like slice return part of string need start and end index");
+        let str4 = "ajinath";
+        console.log(str4.substring(2,4));
+        
+        // replace - replace string with new value add by user but it's case sensitive
+        // To replace case insensitive, use a regular expression with an /i flag (insensitive):
+        // let text = "Please visit Microsoft!";
+        // let newText = text.replace(/MICROSOFT/i, "W3Schools");
+        //Regular expressions are written without quotes
+        //To replace all matches, use a regular expression with a /g flag (global match):
+        console.log("replace - replace string with new value add by user but it's case sensitive");
+        let str5 = "ajinath shinde is bad";
+        let res5 = str5.replace("bad","your dad");
+        console.log(res5);
+
+        //replaceAll - use for replace all matches
+        console.log("replaceAll - use for replace all matches");
+        let str6 = "full name of ajinath shinde is ajinath sakharam shinde and ajinath is from kukana"
+        let res6 = str6.replaceAll("ajinath","bhajinath");
+        console.log(res6);
+
+        // toUpperCase - convert text into toUpperCase
+        console.log("toUpperCase - convert text into toUpperCase");
+        let str7 = "ajInaTh ShiNde";
+        console.log(str7.toUpperCase());
+        
+        // toLowerCase - convert text into toLowerCase
+        console.log("toLowerCase - convert text into toLowerCase");
+        let str8 = "ajInaTh ShiNde";
+        console.log(str8.toLowerCase());
+
+        // concat - merge two or more string with one
+        console.log("concat - merge two or more strangs with one");
+        let str9 = "ajinath";
+        let str10 = "sakharam";
+        let str11 = "shinde";
+        console.log("......................................below conlol is amazing......................................");
+        console.log(str9.concat(  " " +  (str10 +  " " + str11)));
+        console.log("......................................printed spaces in output ......................................");
+
+        // trim -  remove unwanted spaces form both side of string
+        // trimStart -  
+        // trimEnd -  
+        console.log("trim -  remove unwanted spaces form both side of string ");
+        let str12 = "         ajinath       sakharam  shinde       "
+        console.log(str12.trim());
+
+        // charAt - find character from provided position in string
+        console.log("charAt - find character from provided position in string");
+        let str13 = "ajinath shinde";
+        console.log(str13);
+        console.log(str13.charAt(0));
+        console.log(str13.charAt(10));
+        console.log(str13.charAt(3));
+
+        console.log("convert string into array using split");
+        let str14 = "ajinath shinde";
+        console.log(typeof str14);
+        let res14 = str14.split(" ");
+        console.log(res14);
+        console.log(typeof res14);
+    </script>
+</body>
+</html>

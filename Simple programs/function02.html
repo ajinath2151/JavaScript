@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    
+    <script>
+        let marks = {
+            ajinath:20,
+            vikas:40,
+            bhagwan:80,
+            amol:70
+        }
+        for(let i=0;i<Object.keys(marks).length;i++) {
+            console.log("the marks of" + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]]);
+        }
+        //using for in loop
+        for(let key in marks) {
+            console.log("the marks of" + key + " are " + marks[key]);
+        }
+
+    </script>
+</body>
+</html>

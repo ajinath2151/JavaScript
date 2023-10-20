@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple handler to a promise </title>
+</head>
+<body>
+        <script>
+            // here not retuning previous promise value to next .then
+            //here we can directly attach multiple handler without settimeout and without return
+            let p1 =  new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    console.log("i am not  resolve")
+                    resolve(1)
+                }, 2000);
+            })
+            p1.then(()=>{
+                console.log("promise is resolved ");
+            })  
+            p1.then(()=>{
+                console.log("hurrrrey");
+            })
+        </script>
+</body>
+</html>

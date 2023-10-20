@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTypes</title>
+</head>
+<body>
+    
+    <script>
+        // N-Number
+        // N-null
+        // B-Boolean
+        // B-BigInt
+        // S-Symbol
+        // S-String
+        // U-undefined
+console.log("primitive data types")
+let a=null;
+let b=10;
+        let c=true;
+        let d=BigInt("123") + BigInt("7");
+        let e=Symbol("i am a nice symbol");        
+        let f="ajinath"; 
+        let g=undefined;
+        console.log(a,b,c,d,e,f,g);
+        console.log(typeof(d));
+
+
+        // object is key value paisr
+        console.log("Objects data types")
+        const item = {
+            "1":"ajinath",
+            "2":"vikas",
+            "3":"amol",
+            "4":"Bhagwan",
+            "5":"rohit",
+        }
+        console.log(item["1"]);
+        console.log(item["45"]); /* it will show undefined*/
+        </script>
+</body>
+</html>

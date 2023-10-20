@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add number in string variable</title>
+</head>
+<body>
+    <script>
+        // Add Number In String Variable
+        let str = "ajinath";
+        console.log(typeof str , str);
+        str=10;
+        console.log(str);
+
+        // use typeof operator to find the type of variable
+        console.log(typeof str);
+
+        // create const variable and try to change value
+        const a = {
+            name : "ajinath",
+            section : 1,
+            isManager : false
+        }
+        // a=20;
+        console.log(a); //error - Assignment to constant variable.
+
+        a['friend'] = "vikas";
+        console.log(a);
+
+        // create word meaning dictionary
+        const dictionary = {
+            and : "a boy and a girl",
+            Delete : "remove or obliterate",
+            Defend : "resist an attack made on someone or something",
+        }
+        console.log(dictionary.and);
+        console.log(dictionary["Delete"]);
+        console.log(dictionary.Defend);
+
+    </script>
+</body>
+</html>

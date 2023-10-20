@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //some of method used below, for all type string in js mdn/w3school
+
+        const name = "ajinath shinde";     
+        const str = "this is string for testing purpose of string methods"   
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+        console.log(name.length);
+        console.log(name.substring(0,7));
+        console.log(name.substring(0,7).toUpperCase());
+
+         // split string into an array of substring, return new array   
+         // split string into an array of substring, return new array   
+        console.log(str.split(" "))
+        console.log(str.split("of"))
+
+        // template literals
+
+        let boy1="pramod";
+        let boy2="nikhil";
+
+        let sentence = `${boy1} is a friend of ${boy2}`
+        console.log(sentence);
+        
+        // escape sequence character
+        let cement = 'india\'s number one cement ultratech'
+        let cement2 = "india\'s number one cement ultratech"
+        console.log(cement);
+        console.log(cement2);
+
+        let country="india";        
+        console.log(country.replace("india","bharat"));
+
+        // concat - concat the string 
+        // splice - 1 add new item, 2 remove item. ,3 and so and item which is for add
+        // slice - from to to string
+        //trim - remove spaces
+    </script>   
+</body>
+</html>

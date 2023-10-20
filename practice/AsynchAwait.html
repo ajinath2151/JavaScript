@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncs / Await</title>
+</head>
+<body>
+    
+    <script>
+        // async / await - we will wait to our function till complete different code execute inside function
+        // make function async and wait for complete the promises
+        // async function always return a promise, other values are wrap in promise automatically 
+        // only stop execution  for inside function promises if there is another function which not async it run simultaneously 
+        async function weather() {            
+            let mumbaiWeather = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("20 deg");
+            }, 4000);
+        })
+        let puneWeather = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("30 deg");
+            },8000);
+        })
+        // mumbaiWeather.then(alert)
+        // puneWeather.then(alert)
+        console.log("fetching mumbai weather...");
+        let mumbaiW = await mumbaiWeather
+        console.log("fetched mumbai W");
+        console.log("fetching pune weather...");
+        let puneW = await puneWeather
+        console.log("fetched pune W");
+        // console.log(mumbaiW,puneW);
+        return [mumbaiW,puneW]
+    }
+    let res = weather();
+    res.then((value)=>{
+        console.log(value);
+    })
+    </script>
+
+</body>
+</html>

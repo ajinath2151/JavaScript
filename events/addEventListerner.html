@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEvemtListener</title>
+</head>
+<body>
+    <!-- addEvemtListener : use to add multiple event handler to one event -->
+    <p>addEvemtListener : use to add multiple event handler to one event</p>
+
+    <div>
+        <button id="btn">click me</button>
+    </div>
+    <script>
+
+        let x = function(e){
+            alert("hello 1")
+        }
+        btn.addEventListener('click',x)
+
+        let y=function(e){
+            alert("hello 2")
+        }
+        btn.addEventListener('click',y)
+
+        let a=prompt("enter favorite number 1 or 2")
+        if(a=="2") {
+            btn.removeEventListener('click',x);
+        }
+        </script>
+</body>
+</html>

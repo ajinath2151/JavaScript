@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    
+    <script>
+        // synchronous - run sequently one by one like below code
+        // let a = prompt("your name");
+        // let b = prompt("your age");
+        // let c = prompt("favorite color");
+        // console.log(a + " is " + b + " your old and has " + c + " favorite color");
+
+        // asynchronous programming - multiple process run at time
+        // console.log("start");
+        // setTimeout(() => {
+        //     console.log("he i am good");
+        // }, 3000);
+        // console.log("end");
+
+        // callback function
+        function loadScript(src, callback) { 
+            let script = document.createElement("script") ;
+            script.src = src;
+            script.onload = function() {
+                console.log("script loaded..");
+                callback();
+            }
+            document.body.appendChild(script);
+        }
+        function hello() {
+            alert("hello function")
+        }
+        function bolo() {
+            alert("bolo function")
+        }
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",hello)
+    </script>
+</body>
+</html>

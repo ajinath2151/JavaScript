@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake Water Gun Game</title>
+</head>
+<body>
+    <script>
+        let user = prompt('enter your player \'snake\' \'water\' or \'gun\' ')
+        let computerInput = Math.floor(Math.random() * 3); 
+        let computer = ['snake','water','gun'][computerInput]
+        gameFunction=(user,computer)=> {
+            if(user == computer) {
+                return "Nobody Won, Match is Tied.."
+            }
+            else if(user=='snake' && computer =='water') {
+                return "User";
+            }
+            else if(user=='snake' && computer =='gun') {
+                return "User";
+            }
+            else if(user=='water' && computer =='gun') {
+                return "Computer";
+            }
+            else if(user=='water' && computer =='snake') {
+                return "Computer";
+            }
+            else if(user=='gun' && computer =='snake') {
+                return "User";
+            }
+            else if(user=='gun' && computer =='water') {
+                return "Computer";
+            }
+            else {
+               return "player name should be correct"
+            }
+        }
+        let result = gameFunction(user,computer)
+        document.write(`User : ${user} <br/> Computer : ${computer} <br/> The winner is : ${result.toUpperCase()} ` );
+        
+    </script>
+</body>
+</html>
