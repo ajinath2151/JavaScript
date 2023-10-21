@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    
+    <script>
+        function loadScript(src,callback){
+            let script = document.createElement("script");
+            script.src=src;
+            script.onload = function() {
+                console.log("script loaded successfully");                                
+                callback();
+            }
+            document.body.appendChild(script)
+        }
+        function customFunciton() {
+            console.log("i am custom funciton");
+        }
+        loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js",customFunciton)
+    </script>
+</body>
+</html>

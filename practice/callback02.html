@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example 2</title>
+</head>
+<body>
+    
+    <script>
+        function loadScript(src,callback){
+            let script = document.createElement("script")
+            script.src = src;
+            script.onload = function() {
+                console.log("script loaded..");
+                callback();
+            }
+            document.body.appendChild(script);
+        }
+        function hello(){
+            console.log("i am hello function");
+        }
+        function tillu(){
+            console.log("i am tillu function");
+        }
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",tillu)
+    </script>   
+</body>
+</html>

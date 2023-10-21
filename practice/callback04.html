@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example 4</title>
+</head>
+<body>
+    
+    <script>
+        function myCallbackFunciton(src,callback) {
+            var script = document.createElement("script");
+            script.src = src;            
+            document.body.appendChild(script)
+            script.onload = function(){
+                console.log("script loaded..  " + src);                
+                callback();
+            }            
+        }   
+        function tilluFunciton(){
+            console.log("i am tillu funciton");
+        }    
+        myCallbackFunciton("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js",tilluFunciton)
+    </script>
+</body>
+</html>
