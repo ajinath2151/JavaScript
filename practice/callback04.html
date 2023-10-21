@@ -11,11 +11,14 @@
         function myCallbackFunciton(src,callback) {
             var script = document.createElement("script");
             script.src = src;            
-            document.body.appendChild(script)
             script.onload = function(){
                 console.log("script loaded..  " + src);                
                 callback();
             }            
+            script.onerror = function() {
+                console.log("error in loading script check again");
+            }
+            document.body.appendChild(script)
         }   
         function tilluFunciton(){
             console.log("i am tillu funciton");
