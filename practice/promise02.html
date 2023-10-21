@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise example 2</title>
+</head>
+<body>
+    
+    <script>
+       let p1 = new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(5);                        
+        }, 3000);
+       });
+       let p2 = new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            // resolve("ajinath");                        
+            reject(new Error("this is error"))
+        }, 6000);
+       });
+       
+       
+
+
+       p1.then((value)=>{
+        console.log(value);
+       })
+
+       p2.then((value)=>{
+        console.log(value);
+       })
+
+    </script>
+</body> 
+</html>
