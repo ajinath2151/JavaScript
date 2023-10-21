@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise chaining</title>
+</head>
+<body>
+    
+    <!-- .then chaining - send result of promise in next .then called chaining -->
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log("p1 resolve");
+                resolve(20);
+            }, 3000);
+        })
+        p1.then((value)=>{
+            console.log(value);
+            let p2 = new Promise((resolve,reject)=>{
+                setTimeout(() => {                    
+                    resolve("p2 resolve");
+                }, 2000);
+            })
+            return p2;
+        }).then((value)=>{
+            console.log("we are done");
+        })
+    </script>
+</body>
+</html>

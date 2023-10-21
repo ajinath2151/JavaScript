@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple handler to single promise</title>
+</head>
+<body>
+    
+    <script>
+        console.log("p1 is pending");
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve(10);
+            }, 3000); 
+        })
+        p1.then(()=>{
+            console.log("first .then");
+        })
+        p1.then(()=>{
+            console.log("second  .then");
+        })
+
+    </script>
+</body>
+</html>
