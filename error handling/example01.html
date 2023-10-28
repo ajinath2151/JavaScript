@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+<body>
+    
+    <script>
+        setTimeout(() => {
+            console.log("searching nearest wifi for hack...");
+        }, 2000);
+        setTimeout(() => {
+            console.log("got nearest wifi...");
+        }, 4000);
+
+        // used try catch for handle error
+        // try {
+        //     console.log(priyanka); //this will handle because this code is synchronous
+        // }
+        // catch(error) {
+        //     console.log( " outside balle balle error " + error);
+        // }
+        
+        // this will not handle
+        try {
+            setTimeout(() => {                
+                console.log(priyanka); //not handle because this code is asynchronous code and we schedule it
+            }, 2000);
+        }
+        catch(error) {
+            console.log( " inside settimeout balle balle error " + error);
+        }
+
+        //this will handle
+        // try {
+        //     setTimeout(() => {                
+        //         try {                    
+        //             console.log(priyanka); //not handle because this code is asynchronous code and we schedule it
+        //         } catch (error) {                    
+        //             console.log( " try catch inside try catch balle balle error " + error);
+        //         }
+        //     }, 2000);
+        // }
+        // catch(error) {
+        // }
+
+
+        setTimeout(() => {
+            console.log("fetching rahul's  wifi password");
+        }, 6000);
+        setTimeout(() => {
+            console.log("fetching password in process.");
+        }, 8000);
+        setTimeout(() => {
+            console.log("fetching password successfully...");
+        }, 10000);
+    </script>
+</body>
+</html>
