@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise </title>
+</head>
+<body>
+    
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                alert("after 3 seconds")
+                resolve(30);
+                // reject(new Error("error in promise p1"))
+                
+            }, 3000);
+        })
+        .then((value)=>{
+            setTimeout(() => {
+                console.log(value);
+            }, 2000);
+        })
+        .then(()=>{
+            console.log("first .then ");
+        })
+        .then(()=>{
+            console.log("second .then ");
+        })
+        .then(()=>{
+            console.log("third .then ");
+        })
+        
+    </script>
+</body>
+</html>
