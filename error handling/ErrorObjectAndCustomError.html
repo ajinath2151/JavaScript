@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error object and custom error</title>
+</head>
+<body>
+    
+    <script>
+        // error object - for all built in error , error object has two main properties name and message
+
+        // try {
+        //     priyanka
+        // } catch (error) {
+        //     console.log("full error : " + error + " \n");
+        //     console.log("error name : " + error.name + " \n");
+        //     console.log("error message : " + error.message + " \n");
+        // }
+        
+        //custom error
+        // try {
+        //     throw new Error("errors are good ")
+        // } catch (error) {
+        //     console.log("full error : " + error + " \n");
+        //     console.log("error name : " + error.name + " \n");
+        //     console.log("error message : " + error.message + " \n");
+        // }
+        
+        
+        // custom error program
+
+        try {
+            let age = prompt("enter age")
+            age = Number.parseInt(age)
+            if(age>100) {
+                throw new ReferenceError("this is probabialy not true")
+            }
+        } catch (error) {
+            console.log("full error : " + error + " \n");
+            console.log("error name : " + error.name + " \n");
+            console.log("error message : " + error.message + " \n");
+        }
+        console.log("script is still running");
+
+        
+
+    </script>
+</body>
+</html>
