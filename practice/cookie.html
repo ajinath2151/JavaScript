@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    
+    <script>
+        // console.log(document.cookie);
+        document.cookie="name=ajinath2151";        
+        document.cookie="sirname=shinde2151"; 
+        document.cookie="pppppppppppppp";  //cookie will add not override
+        let key = prompt("enter key");
+        let value = prompt("enter value");
+         document.cookie=`${encodeURIComponent(key)} = ${encodeURIComponent(value)}` 
+         //encodeURIComponent use to accept any value / string without it we cant accept key as uvu; and value as = 1
+        console.log(document.cookie);
+        
+        // rules
+        // max limit : 4kb
+        // total no. of cookies per domain is 20+ depend on the browser
+        // 
+    </script>
+</body>
+</html>
