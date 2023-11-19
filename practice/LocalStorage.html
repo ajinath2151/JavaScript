@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title> 
+</head>
+<body>
+
+    <p>in local storeage key and value bothe are string by default</p>
+    <script>
+        // note - in local storeage key and value bothe are string by default
+        let key = prompt("enter key for local storage")
+        let value = prompt("enter value for local storage")
+        //set value to local storage
+        localStorage.setItem(key,value); 
+        // get value from local storage
+        console.log(`the value of key ${key} is :  ${localStorage.getItem(key)}`);
+        // get value from local storage
+        console.log(localStorage.getItem('city'));
+
+        // remove items
+        if (key=='red' || key == 'blue') {
+                localStorage.removeItem(key)
+        }
+
+        // clear -  remove all 
+        // localStorage.clear();
+
+        // key - get key on given positon
+        console.log(localStorage.key(1));
+
+        // length
+        console.log(localStorage.length);
+    
+
+        
+    </script>
+</body>
+</html>
