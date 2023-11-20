@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session storage</title>
+</head>
+<body>
+    
+    all mehtods same as localStorage but it exist only for current tab of braouser
+    <script>
+        sessionStorage.setItem("1","ajinath");
+        sessionStorage.setItem("2","vikas");
+
+        // onstorage method fire when does some changes in local storage or session storeage - this is not parst of session storage or local storage 
+        window.onstorage = myfun = (e)=>{
+            alert("changed")
+            console.log(e);
+        }
+    </script>
+</body>
+</html>
