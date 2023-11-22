@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+</head>
+<body>
+    
+    <script>
+    {/* let a = 10;
+    let A = 20;
+    console.log(a);
+    console.log(A); */}
+    let a = {
+        name2:"ajinath",
+        salary:"50,000",
+        run:()=>{               //make run method in p object
+            alert("self run.....")
+        }
+    }
+    console.log(a);
+
+    let p = {                   //create p object
+        run:()=>{               //make run method in p object
+            alert("run method get called.....")
+        }
+    }
+
+    //prototype of prototype
+    p.__proto__= {
+        name:"bhagwan",
+    }
+
+    //prototype setted...we can set prototype of any object //set out custom prototype //we can make prototype of prototype
+    a.__proto__=p;      //here p is a prototype of a
+    a.run();
+    console.log(a.name);
+    </script>
+
+</body>
+</html>
