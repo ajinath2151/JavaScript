@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <script>
+      //creating class
+      // class RailwayForm {
+
+      //     constructor(givenname, giveTrainNumber) {
+      //         console.log("const called...." + givenname + " " + giveTrainNumber);
+      //         this.gname=givenname;
+      //         this.gtn = giveTrainNumber
+      //     }
+
+      //     submit(){
+      //         alert(this.gname + " form submitted " + "with tranin number " + this.gtn)
+      //     }
+      //     cancel(){
+      //         alert(this.gname + " form canceled... " + "with tranin number " + this.gtn)
+      //     }
+      // }
+      // // making a object
+      // let ajinathForm = new RailwayForm(" ajinath ",1111);
+      // // fill data in ajinathForm Object
+      // let rohitForm = new RailwayForm(" rohit ",2222);
+
+      // // calling methods
+      // ajinathForm.submit()
+      // rohitForm.submit()
+      // rohitForm.cancel()
+
+      class RailwayForm {
+        constructor(givenname, giveTrainNumber, address) {
+          console.log("const called...." + givenname + " " + giveTrainNumber);
+          this.gname = givenname;
+          this.gtn = giveTrainNumber;
+          this.add = address;
+          
+        }
+
+        submit() {
+          alert(
+            this.gname + " form submitted " + "with tranin number " + this.gtn
+          )
+        }
+        preview() {
+          alert(
+            this.gname + " you form for train number"  + this.gtn + " and address " + this.add
+          )
+        }
+        cancel() {
+          alert(
+            this.gname + " form canceled... " + "with tranin number " + this.gtn
+          );
+          this.gtn = 0;
+        }
+      }
+      let ajForm = new RailwayForm("ajinath",3333,"kukana");
+
+      ajForm.preview()
+      ajForm.submit()
+      ajForm.cancel()
+      ajForm.preview()
+
+    </script>
+  </body>
+</html>
