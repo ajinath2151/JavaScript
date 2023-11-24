@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//creating class
+class RailwayForm {
+    submit(){
+        alert(this.name + " form submitted" + "with tranin number " + this.tn)
+    }
+    cancel(){
+        alert(this.name + " form canceled..." + "with tranin number " + this.tn)
+    }
+    // fill method
+    fill(givenname, giveTrainNumber) {
+        this.name=givenname;
+        this.tn = giveTrainNumber
+    }
+}
+// making a object
+let ajinathForm = new RailwayForm()
+// fill data in ajinathForm Object
+ajinathForm.fill(" ajinath",1111)
+let rohitForm = new RailwayForm()
+// fill data in rohitForm Object
+rohitForm.fill(" rohit",2222)
+
+
+// calling methods
+ajinathForm.submit()
+rohitForm.submit()
+rohitForm.cancel()
+    </script>
+</body>
+</html>
