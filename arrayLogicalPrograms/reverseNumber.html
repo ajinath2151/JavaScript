@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse number</title>
+</head>
+<body>
+    
+    <script>
+    let number = prompt("enter number");    
+    let reminder=0;    
+    let sum = 0;    
+    while (number > 0) {
+        reminder = number % 10;        
+        sum = (sum * 10) + reminder;        
+        number = Math.floor (number / 10);        
+    }
+    console.log("reverse number : " + sum);
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Number</title>
+</head>
+<body>
+    <h2>Perfect Number : sum of all digit is equals to that number called perfect number</h2>
+    <script>
+        let number = prompt("enter number to find perfect number");
+        let temp=number;
+        let sum=0;
+        for (let i = 1; i < number ; i++) {
+            if(number%i==0) {
+                sum = sum + i;
+            }   
+        }
+        if(sum==number) {
+            console.log(number+" is perfect number");
+        }
+        else {
+            console.log(number+" is not perfect number");
+        }
+    </script>
+</body>
+</html>

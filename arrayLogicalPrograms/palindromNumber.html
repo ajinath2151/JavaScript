@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome number </title>
+</head>
+<body>
+    
+    <h1>Palindrome number : original number and it's reverse should be same</h1>
+    <script>
+        let number = prompt("enter number");
+        let temp = number;
+        let reminder;
+        let sum=0;
+        while(number>0) {
+            reminder=number%10;
+            sum=sum*10+reminder;
+            number=Math.floor(number/10);
+        }
+        if(sum==temp) {
+            console.log("yes it's palindrome number" + sum);
+        }
+        else {
+            console.log("no it's not a palindrome number" + temp);
+        }
+    </script>
+</body>
+</html>
