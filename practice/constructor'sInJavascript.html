@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor's in js</title>
+</head>
+<body>
+    
+    <script>
+        class Employee {
+            // constructor(name) {
+            //     this.name = name;
+            //     console.log(`${this.name}constructor of superclass Employee`);
+            // }
+            logIn() {
+                console.log(`employee has logged in`);
+            }
+            logOut() {
+                console.log(`employee has logged out`);
+            }
+            requestLeave(leaves) {
+                console.log(`Employee requested ${leaves} leaves - auto approve`);
+            }
+        }
+        class Programmer extends Employee {
+            // default constructor
+            // constructor(...args) {
+            //     super(...args);               
+            // }
+            constructor(name) {
+                super();
+                this.name = name;
+                console.log(`${this.name}programmer's of superclass Employee newly written`);
+            }
+            requestCoffee() {
+                console.log(`Employee has requested ${x} coffee`);
+            }
+            requestLeave(leaves) {
+                super.requestLeave(4);
+                console.log("one extra is granted");
+                // console.log(`Programmer requested ${leaves + 1} leaves, (1 extra)`);
+            }
+        }
+        let e = new Programmer("ajinath");
+        e.logIn();
+        e.requestLeave(3); 
+    </script>    
+</body>
+</html>
