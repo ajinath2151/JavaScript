@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <p>
+        destructuring assignment use to unpack values from array or object into distinct variables
+    </p>
+    <script>
+        // let arr=[2,4];
+        let arr=[2,4,6,8, 10, 12, 14]; //for this also value becomes 2 and 4
+        //here a value becomes 2 and b value becomes 4
+        //destructuring with spread operator        
+
+        // let [ a, b, c, d, ...rest] = arr;         
+        // console.log(a, b, c, d, rest);
+
+        // no need to do below code like
+        // let a = arr[0];
+        // let b = arr[1];                
+
+        // value of a is 3 and start rest value start from 10 other not assign to any element
+
+        // let [ a, , , , ...rest] = arr;         
+        // console.log(a, rest);
+        
+        // print values in a , d and rest
+        // let [ a, , , d, ...rest] = arr;         
+        // console.log(a, d, rest);
+        
+        // for object
+        let {a , b} = {a : 1, b : 5};
+        console.log(a, b);
+        
+    </script>
+</body>
+</html>
