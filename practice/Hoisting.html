@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    
+    <script>
+        // hosting use with var only , cannot be used with const and let
+        // folling two lines success because of hoisting concept of js
+        console.log(a); //undefined
+        greetings();
+        function greetings() {
+            console.log("good morning!");
+        }
+        var a = 10; // here with value
+        console.log(a); //here print the value
+    </script>
+</body>
+</html>
