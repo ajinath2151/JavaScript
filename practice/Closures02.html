@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures 02</title>
+</head>
+<body>
+    <script>
+        function init() {
+        var name = "Mozilla"; // name is a local variable created by init
+        function displayName() {
+            // displayName() is the inner function, that forms the closure
+            console.log(name); // use variable declared in the parent function
+        }
+        name = "ajianth"; //ajianth name print here,because when closure is return it returns with it refrences(name) not with values(mazila)
+        displayName();
+        }
+        init();
+    </script>
+</body>
+</html>

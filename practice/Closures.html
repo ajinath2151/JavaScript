@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+        let message  = "globals";
+        function hello1(){
+            let message  = "good Morning";
+            {
+                let message  = "good Afternoon";
+                console.log("hello 1" + message);
+            }
+            // in closure we function and it's lexical eniverment like below we get value of message too
+            let c = function hello2 () {
+              console.log("i am c " + message);
+            }
+            return c;
+        }
+        c=hello1();
+        c();
+    </script>
+</body>
+</html>
