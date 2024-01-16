@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind method of JS</title>
+</head>
+<body>
+    
+    <h1 id="demo"></h1>
+    <h1 id="demo2"></h1>
+
+    <script>
+        const person = {
+            salary : "30000",
+            company : "TCS",
+            
+            detailsFunction : function(){
+                return this.salary + " " + this.company;
+            }
+        }
+        const softwareDeveloper = {
+            salary : "50000",
+            company : "Tech Mahindra"
+        }
+        let showDetails = person.detailsFunction.bind(softwareDeveloper)
+        document.getElementById("demo").innerHTML = showDetails();
+        const bankingProfessor = {
+            salary : "40000",
+            company : "sbi"
+        }
+        let showDetails2 = person.detailsFunction.bind(bankingProfessor)
+        document.getElementById("demo2").innerHTML = showDetails2();
+    </script>
+</body>
+</html>
