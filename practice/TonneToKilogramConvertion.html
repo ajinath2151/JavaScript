@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonne to Kilogram</title>
+</head>
+<body>
+    <h2>Tonne to Kilogram Convertor</h2>
+    <p>Type a value in tonne and see result in Kilogram </p>
+    <form action="">
+        <label for="tonne">Tonne</label>
+        <input type="number" name="" id="" placeholder="enter tonne" onchange="weightConvertor(this.value)" oninput="weightConvertor(this.value)"> <br>
+        <label for="">Kilogram : <span id="outputKilogram"></span> </label>
+    </form>
+
+    <script>
+        function weightConvertor(valNum) {
+            document.getElementById('outputKilogram').innerHTML = valNum*1000;
+        }
+    </script>
+</body>
+</html>
