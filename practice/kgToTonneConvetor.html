@@ -1,0 +1,22 @@
+ <!-- kg/kilogram to tonne convertor -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kg to tonne convertor</title>
+</head>
+<body>
+    
+    <h2>kg/kilogram to tonne convertor.</h2>
+    <label for="kg">Kilogram/kg</label>
+    <input type="number" name="" id="" placeholder="enter kg" onchange="tonneCovertor(this.value)" oninput="tonneCovertor(this.value)"> <br>
+    <label for="">Value in  Tonne :  <span id="outputTonne"></span></label>
+
+    <script>
+        function tonneCovertor (num) {
+            outputTonne.innerHTML = num/1000;
+        }
+    </script>
+</body>
+</html>
