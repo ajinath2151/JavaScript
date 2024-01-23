@@ -1,0 +1,27 @@
+<!-- 2 example of forEach loop -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach loop</title>
+</head>
+<body>
+    
+    <script>
+        // iterate once on each element without stop, at least one parameter compulsory 
+        let arr = [1, 2, 3, 4, "ajinath", true];        
+        arr.forEach((element, index)=>{
+            document.write(` index : ` + index + ` value: ` + element + `<br>`);
+        })
+
+        document.write(`______________________________________________________________________ <br>`);
+
+        let arr2 = [1, 2, 3];
+        arr2.forEach((index, value)=> {
+            document.write(` index : ` + index + ` value: ` + value + `<br>`);
+        })
+
+    </script>
+</body>
+</html>
