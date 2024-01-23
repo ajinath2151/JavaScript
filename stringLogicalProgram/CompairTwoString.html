@@ -1,0 +1,22 @@
+
+<!-- //compare two stings -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string compression</title>
+</head>
+<body>
+    <h1 id="cmpDemo"></h1>
+</body>
+    <script>
+        
+        let str1 = prompt("Please enter first string");
+        let str2 = prompt("Please enter second string");
+        
+        let res = str1==str2? `Both are same : ${str1}  and ${str2}` : `Two different strings : ${str1}  and ${str2}`;
+        document.getElementById("cmpDemo").innerHTML = res
+        console.log(res);
+        </script>
+</html>
