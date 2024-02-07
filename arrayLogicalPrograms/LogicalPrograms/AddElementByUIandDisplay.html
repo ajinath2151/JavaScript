@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Array Item</title>
+</head>
+<body>
+    
+    
+        <input type="number" name="" id="arrInput">
+        <button type="submit" onclick="addItemInArray()">Add array Item</button> <br>
+        <label for="" id="">Element</label> :  <label for="" id="elementNumber"></label><label for=""> = </label> <label for="" id="counter"></label>
+    
+    <script>
+        let arr = [];
+        let elementNumber = 0;
+        let res;
+        function addItemInArray() {
+            
+         res = document.getElementById("arrInput").value;        
+         arr.push(res)
+         console.log(arr);
+         console.log(elementNumber);
+         elementNumber++;
+         document.getElementById("elementNumber").innerText = elementNumber;
+         document.getElementById("counter").innerText = arr;
+        }    
+        
+        // arr = addItemInArray(document.getElementById("arrInput").value);
+        // console.log(arr);
+    </script>
+</body>
+</html>
