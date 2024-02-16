@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun Game</title>
+</head>
+<body>
+    
+    <h1>Snake/Water/Gun - Game</h1>
+    
+    <script>
+        //console.log(user + " user input"); //print user entered input
+        let random = Math.floor(Math.random()*3);
+        //console.log(random + " random number"); // print 0 to 3
+        let ComputerPlayer = ['snake', 'water', 'gun'][random];
+        // console.log(userPlayer);
+        
+        function game(user,computer) {
+            console.log(user,computer); //print user
+            if(user == computer) {
+                return "Match are tied!";
+            }
+            else if(user == 'snake' && computer=='water') {   
+                return "User";
+            }
+            else if(user == 'snake' && computer=='gun') {   
+                return "Computer";
+            }
+            else if(user == 'gun' && computer=='water') {   
+                return "Computer";
+            }
+            else if(user == 'gun' && computer=='snake') {   
+                return "User";
+            }
+            else if(user == 'water' && computer=='snake') {   
+                return "Computer";
+            }
+            else if(user == 'water' && computer=='gun') {    
+                return "User";
+            }
+            else {
+                return "Please enter correct player name";
+            }
+        }
+        // let user = game(prompt("Enter Your Player. snack, water or gun"),ComputerPlayer);
+        let user = prompt("Enter Your Player. snack, water or gun");
+        document.write(` User Enter  : ${user} <br>`)
+        let result = game(user,ComputerPlayer);
+        document.write(` Computer Enter  : ${ComputerPlayer}`)
+        if(result == 'Match are tied!') {
+            console.log(result);
+            document.write(`<h2>${result}</h2>`)
+            
+        }
+        else if(result != 'Please enter correct player name'){
+            document.write(` <h2>  ${result} won the match</h2>`);
+            console.log(result + ' won the match');        
+        }
+        else {
+            document.write(` <h2>  ${result}</h2>`);
+            console.log(result);        
+        }
+
+    </script>
+</body>
