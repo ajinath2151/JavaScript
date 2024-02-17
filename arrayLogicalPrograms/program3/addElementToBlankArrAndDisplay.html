@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Display Array Item</title>
+</head>
+<body>
+    <input type="text" name="" id="txtAdd">
+    <button value="Add" id="btnAdd" onclick="addElementToArray()">Add</button>
+    <button value="Display" id="btnDisplya" onclick="displayElement()">Display</button>
+    <hr>
+    <script>
+        let arr = Array();
+        let x = 0;
+        function addElementToArray() {
+            arr[x] = document.getElementById("txtAdd").value;
+            console.log(`Element ${x} added`);
+            // alert(`Element ${x} added`);
+            x++;
+            document.getElementById("txtAdd").value ="";
+        }
+        function displayElement() {
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i] + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
