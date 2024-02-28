@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h2>String methods and their usages</h2>
+    <script>
+        let str = "Ajinath Sakharam shinde kukana";
+        let str2 = "dist amednagar";
+        console.log("original string : " + str);
+        
+        let len = str.length;
+        console.log("string length : " + len);
+        
+        let upper = str.toUpperCase();
+        console.log("upper case : " + upper);
+
+        let substr = str.substring(0,7);
+        console.log("substring : " + substr);
+        
+        let arr = str.split('');
+        console.log("convert to array : " + arr);
+        
+        let chrAt = str.charAt(5);
+        console.log("char at : " + chrAt);
+        
+        // join('') - return array as string
+        let mainStr = arr.join('');
+        console.log("from array to string : " + mainStr);
+        
+        // char code - return character assci code of specific character
+        let charCode = str.charCodeAt(0);
+        console.log("char code : " + charCode);
+        
+        let strConcat = str.concat(str2);
+        console.log("char concat : " + strConcat);
+        
+        let isIncludes =  str.includes('z');
+        console.log("is include : " + isIncludes);
+        let isIncludes2 =  str.includes('s');
+        console.log("is include : " + isIncludes2);
+        
+        let indexOfChar = str.indexOf('i');
+        console.log("index of a is : " + indexOfChar);
+
+
+
+        
+    </script>
+</body>
+</html>
