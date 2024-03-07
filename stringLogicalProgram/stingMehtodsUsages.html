@@ -9,7 +9,7 @@
     <h2>String methods and their usages</h2>
     <script>
         let str = "Ajinath Sakharam shinde kukana";
-        let str2 = "dist amednagar";
+        let str2 = "     dist     amednagar      ";
         console.log("original string : " + str);
         
         let len = str.length;
@@ -18,6 +18,7 @@
         let upper = str.toUpperCase();
         console.log("upper case : " + upper);
 
+        //return substring form provided index
         let substr = str.substring(0,7);
         console.log("substring : " + substr);
         
@@ -46,9 +47,40 @@
         let indexOfChar = str.indexOf('i');
         console.log("index of a is : " + indexOfChar);
 
-
-
         
+        // endwith - check if string end with a given character or not
+        let strEndWith = str.endsWith('s');
+        console.log("End with S? " + strEndWith);
+        
+        // lastIndexOf - return last index of given character
+        let stringLastIndexOf = str.lastIndexOf('s');
+        console.log("Last Index Of : " + stringLastIndexOf);
+        
+        // match - match text in string if match return that text otherwise return null
+        let strMatch = str.match(/kuk/);
+        console.log("match : " + strMatch);
+        
+        // replace - replace string with provided string 
+        let strReplace = str.replace('kukana','ahmednagar')
+        console.log("Replace : " + strReplace);
+        
+        
+        // search - return index positon of first search match
+        let strSearch = str.search('kukana');
+        console.log("Search : " + strSearch);
+
+        // trim - remove starting and ending white spaces
+        let strTrim = str2.trim();
+        console.log(strTrim);
+        
+        // trimend - remove ending white spaces
+        let strTrimEnd = str2.trimEnd()
+        console.log(strTrimEnd);
+        
+        // trimStart - remove starting white spaces
+        let strTrimStart = str2.trimStart()
+        console.log(strTrimStart);
+                
     </script>
 </body>
 </html>
