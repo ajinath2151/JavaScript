@@ -101,3 +101,35 @@ let arr14 = [1,2,3,4,5];
 arr14.splice(1,3);
 console.log("after slice method : " + arr14);
 
+// 15: search - search() method  in js is find,includes,indexOf, lastIndexOf, findIndex,findLast, findLastIndex
+
+let arr15 = [1,2,3,4,5,6,7,8,9,10,2];
+let positionIndexOf = arr15.indexOf(4);
+console.log("index of 4  is : " + positionIndexOf);
+
+//find return the element which first pass the test
+
+function myFunction(value) {
+    return value > 5
+}
+let number = arr15.find(myFunction)
+console.log("first number grater than 5 is : " + number);
+//lastIndexOf is find last index of provided element
+let lastInd = arr15.lastIndexOf(2);
+console.log("last index is : " + lastInd);
+
+//includes : search is element includes in the provided array return true of false
+
+let inc = arr15.includes(5);
+console.log("includes 5 or not : " + inc);
+
+//16:sort methods of array
+
+let arr16 = [2,6,1,4,3,5];
+let sortArr16=arr16.sort();
+console.log("array elements after sorted : " + sortArr16);
+let reverseSortArr16 = sortArr16.reverse();
+console.log("array elements after reverse sorted : " + reverseSortArr16);
+
+
+
